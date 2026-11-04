@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erdvėja – projektavimo studija</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Erdvėja – projektavimo studija. Gyvenamųjų namų projektavimas, rekonstrukcijos, paskirties keitimas ir vizualizacijos Alytaus regione.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=40">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <a class="brand" href="#top" aria-label="Erdvėja">
+    <img src="logo.svg" alt="Erdvėja – projektavimo studija">
+  </a>
+  <nav>
+    <a href="#projektai">Projektai</a>
+    <a href="#paslaugos">Paslaugos</a>
+    <a href="#kontaktai" class="nav-cta">Kontaktai</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO: scroll valdomas kadrų perėjimas -->
+  <section class="hero has-video" id="hero">
+    <div class="hero-stage">
+      <video id="heroVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-shade"></div>
+      <h1 class="hero-title" id="heroTitle" aria-label="Erdvėja"><span class="hl">E</span><span class="hl">R</span><span class="hl">D</span><span class="hl">V</span><span class="hl">Ė</span><span class="hl">J</span><span class="hl">A</span></h1>
+      <canvas id="heroCut" aria-hidden="true"></canvas>
+      <div class="hero-copy" id="heroCopy">
+        <p class="eyebrow">Projektavimo studija</p>
+        <p class="lead">Namai, kuriuose norisi gyventi.</p>
+      </div>
+      <div class="hero-hint" id="heroHint"><span></span>Slinkite žemyn</div>
+      <div class="hero-caption" id="heroCaption">Tas pats namas, skirtingos fasado medžiagos</div>
+    </div>
+  </section>
+
+  <!-- PROJEKTAI -->
+  <section class="projects" id="projektai">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow light">Projektai</p>
+        <h2>Atrinkti darbai</h2>
+        <p class="sub">Rūpinamės kiekviena detale, nes joje gyvensite kasdien.</p>
+        <p class="hint"><span class="hint-d">Užveskite pelę ↗</span><span class="hint-t">Palieskite ↗</span></p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- PASLAUGOS -->
+  <section class="services" id="paslaugos">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Ką darome</p>
+        <h2>Projektuojame<br>visą kelią iki statybos.</h2>
+      </div>
+      <ul class="service-list">
+        <li><span>01</span><div><h3>Nauja statyba</h3><p>Gyvenamieji namai, ūkiniai ir gamybiniai pastatai.</p></div></li>
+        <li><span>02</span><div><h3>Rekonstrukcija ir kapitalinis remontas</h3><p>Esamų pastatų pertvarkymas, pritaikymas šiuolaikiniam gyvenimui.</p></div></li>
+        <li><span>03</span><div><h3>Paskirties keitimas</h3><p>Dokumentai ir projektiniai sprendimai pastato paskirčiai pakeisti.</p></div></li>
+        <li><span>04</span><div><h3>Vizualizacijos</h3><p>Realistiški 3D vaizdai dar prieš prasidedant statyboms.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DETALĖS -->
+  <section class="details" id="detales" aria-label="Detalės">
+    <p class="eyebrow details-label">Šviesa, medžiaga, forma</p>
+    <div class="detail-track" id="detailTrack"><figure><img src="img/stock/d1.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d2.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d3.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d4.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d5.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d6.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d7.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d8.jpg" alt="" loading="lazy"></figure><figure><img src="img/stock/d9.jpg" alt="" loading="lazy"></figure></div>
+  </section>
+
+  <!-- PROCESAS -->
+  <section class="process" id="procesas">
+    <div class="wrap">
+      <p class="eyebrow">Kaip dirbame</p>
+      <h2>Keturi aiškūs žingsniai</h2>
+      <ol class="steps">
+        <li><b>1</b><h3>Pokalbis ir sklypas</h3><p>Išklausome norus, peržiūrime sklypą ir apribojimus.</p></li>
+        <li><b>2</b><h3>Eskizai ir vizualizacijos</h3><p>Pateikiame kelis variantus, kad matytumėte, kaip namas atrodys.</p></li>
+        <li><b>3</b><h3>Projektiniai pasiūlymai ir derinimai</h3><p>Tvarkome derinimus su institucijomis ir paruošiame leidimui reikalingus dokumentus.</p></li>
+        <li><b>4</b><h3>Techninis projektas</h3><p>Parengiame brėžinius ir dokumentus, pagal kuriuos statoma.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VIDEO JUOSTA -->
+  <section class="band" id="juosta">
+    <video src="video/aerial.mp4" poster="video/aerial.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <div class="band-shade"></div>
+    <div class="band-copy">
+      <p class="eyebrow light">Erdvė ir kontekstas</p>
+      <h2>Namas prasideda<br>nuo vietos.</h2>
+    </div>
+  </section>
+
+  <!-- KONTAKTAI -->
+  <section class="contact cv3" id="kontaktai">
+    <div class="wrap">
+      <div class="cv3-cta">
+        <h2>Pradėkime nuo pokalbio.</h2>
+        <a class="cv3-mail" href="mailto:info@erdveja.lt">info@erdveja.lt <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="cv3-cols">
+        <div class="cv3-col cv3-brand">
+          <img src="logo.svg" alt="Erdvėja – projektavimo studija">
+        </div>
+        <div class="cv3-col">
+          <h3>Susisiekite</h3>
+          <a href="tel:+37069308763" class="cv3-line">+370 693 08763</a>
+          <p>Susitikimą reikia suplanuoti iš anksto.</p>
+        </div>
+        <div class="cv3-col">
+          <h3>Studija</h3>
+          <address class="cv3-line">Stasio Taškūno g. 3-2<br>LT-62114 Alytus</address>
+          <a class="cv3-small" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Stasio+Ta%C5%A1k%C5%ABno+g.+3-2%2C+LT-62114+Alytus">Atidaryti žemėlapyje →</a>
+        </div>
+        <div class="cv3-col">
+          <h3>Komanda</h3>
+          <div class="cv3-person">
+            <span class="cv3-av face" role="img" aria-label="Paulina"></span>
+            <span><b>Paulina</b><i>Studijos įkūrėja</i><a href="mailto:paulina@erdveja.lt">paulina@erdveja.lt</a></span>
+          </div>
+          <div class="cv3-person">
+            <span class="cv3-av" aria-hidden="true">K</span>
+            <span><b>Karolina</b><a href="mailto:karolina@erdveja.lt">karolina@erdveja.lt</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv3-map">
+      <iframe title="Studijos vieta žemėlapyje" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Stasio+Ta%C5%A1k%C5%ABno+g.+3-2%2C+LT-62114+Alytus&hl=lt&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="footer cv3-foot">
+  <p>© <span id="year">2026</span> Erdvėja, projektavimo studija</p>
+  <p class="credit">Created by <span>MB „Be Seen“</span></p>
+  <a href="#top">Į viršų ↑</a>
+</footer>
+
+<div class="cursor" id="cursor"><span id="cursorText"></span></div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Uždaryti">✕</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Ankstesnis">←</button>
+  <figure>
+    <img id="lbImg" alt="">
+    <figcaption><span id="lbTitle"></span><span id="lbCount"></span><span id="lbDesc" class="lb-desc"></span></figcaption>
+  </figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Kitas">→</button>
+</div>
+
+<script src="main.js?v=38"></script>
+</body>
+</html>
