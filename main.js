@@ -231,3 +231,10 @@ $$('.service-list li,.steps li,.section-head,.people>div').forEach(function(el){
 
 $('#year').textContent=new Date().getFullYear();
 })();
+
+/* mobilus greitų veiksmų juosta */
+(function(){var bar=document.getElementById('mbar'),k=document.getElementById('kontaktai');if(!bar)return;
+function upd(){var y=window.scrollY,h=window.innerHeight,show=y>h*.7;
+  if(k){var r=k.getBoundingClientRect();if(r.top<h*.55)show=false}
+  bar.classList.toggle('show',show)}
+window.addEventListener('scroll',upd,{passive:true});upd()})();

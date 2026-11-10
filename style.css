@@ -557,3 +557,25 @@ html,body,h1,h2,h3,button,input,address,.eyebrow,.lead,.nav-cta,.site-header nav
 .cv3-foot .credit{margin:0;opacity:.6;font-size:inherit}
 .cv3-foot .credit span{opacity:1}
 @media (min-width:700px){.cv3-foot{gap:24px}.cv3-foot .credit{margin-left:auto;margin-right:24px}}
+
+/* ===== mobili versija ===== */
+.hero-cta,.mbar{display:none}
+@media (max-width:700px){
+  .hero-cta{display:flex;gap:10px;margin-top:18px}
+  .hero-cta .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:999px;background:#fff;color:#1d1e1a;font-weight:600;font-size:14px;letter-spacing:.02em;text-decoration:none}
+  .hero-cta .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px)}
+  .hero-hint{display:none}
+  /* projektai: braukiama juosta vietoj ilgo sąrašo */
+  .grid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(-1*var(--pad));padding:0 var(--pad) 10px;scrollbar-width:none;align-items:flex-start;-webkit-overflow-scrolling:touch}
+  .grid::-webkit-scrollbar{display:none}
+  .grid .card{flex:0 0 82%;scroll-snap-align:center;margin:0!important;transform:none!important;opacity:1!important}
+  .card .ex{display:none!important}
+  .card .meta em{opacity:.8}
+  .projects .hint{margin-top:12px}
+  /* greitų veiksmų juosta */
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:60;gap:8px;padding:8px;border-radius:18px;background:rgba(36,38,26,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.35);transform:translateY(140%);transition:transform .35s ease}
+  .mbar.show{transform:none}
+  .mbar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;color:#fff;border:1px solid rgba(255,255,255,.3);font-weight:600;font-size:15px;text-decoration:none}
+  .mbar a.pri{background:var(--accent);border-color:var(--accent);color:#1d1e14}
+  .cv3-foot{padding-bottom:84px}
+}
