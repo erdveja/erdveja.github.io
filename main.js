@@ -190,7 +190,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){res
     var t=cur?v.currentTime:0;cur=key;
     hero.classList.toggle('portrait',portrait);
     v.poster=portrait?'video/hero-plain.jpg':'video/hero.jpg';
-    v.src=portrait?(window.innerWidth<=900?'video/hero-plain-m.mp4':'video/hero-plain.mp4'):'video/hero.mp4';
+    v.src=portrait?(window.innerWidth<=900?'video/hero-plain-p.mp4':'video/hero-plain.mp4'):'video/hero.mp4';
     v.addEventListener('loadedmetadata',function f(){v.removeEventListener('loadedmetadata',f);try{v.currentTime=t}catch(e){}v.play().catch(function(){})});
     v.load();
   }
