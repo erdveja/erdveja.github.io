@@ -579,3 +579,12 @@ html,body,h1,h2,h3,button,input,address,.eyebrow,.lead,.nav-cta,.site-header nav
   .mbar a.pri{background:var(--accent);border-color:var(--accent);color:#1d1e14}
   .cv3-foot{padding-bottom:84px}
 }
+
+/* mobilus hero v2: mažiau dangaus, užrašas virš namo */
+@media (max-width:700px) and (max-aspect-ratio:1/1){
+  .hero.has-video{height:82svh;min-height:520px}
+  .hero.has-video .hero-stage{height:82svh;min-height:520px}
+  #heroVideo{object-position:50% 88%}
+  .hero-title{top:13svh}
+  .hero.has-video .hero-copy{bottom:5svh}
+}

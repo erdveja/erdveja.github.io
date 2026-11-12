@@ -190,7 +190,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){res
     var t=cur?v.currentTime:0;cur=key;
     hero.classList.toggle('portrait',portrait);
     v.poster=portrait?'video/hero-plain.jpg':'video/hero.jpg';
-    v.src=portrait?'video/hero-plain.mp4':'video/hero.mp4';
+    v.src=portrait?(window.innerWidth<=900?'video/hero-plain-m.mp4':'video/hero-plain.mp4'):'video/hero.mp4';
     v.addEventListener('loadedmetadata',function f(){v.removeEventListener('loadedmetadata',f);try{v.currentTime=t}catch(e){}v.play().catch(function(){})});
     v.load();
   }
@@ -238,3 +238,28 @@ function upd(){var y=window.scrollY,h=window.innerHeight,show=y>h*.7;
   if(k){var r=k.getBoundingClientRect();if(r.top<h*.55)show=false}
   bar.classList.toggle('show',show)}
 window.addEventListener('scroll',upd,{passive:true});upd()})();
+
+
+/* vaizdo patikimumas: groja tik kai matosi, kartoja bandymus (iOS), mažesni failai telefone */
+(function(){
+  var small=Math.min(window.innerWidth,window.innerHeight)<=700;
+  var hv=document.getElementById('heroVideo'),bv=document.getElementById('bandVideo');
+  if(bv){bv.src=small?bv.getAttribute('data-src-m'):bv.getAttribute('data-src');bv.muted=true;bv.load()}
+  function tryPlay(v){if(!v)return;v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  [hv,bv].forEach(function(v){
+    if(!v)return;
+    v.addEventListener('canplay',function(){if(v.__vis!==false)tryPlay(v)});
+    v.addEventListener('stalled',function(){v.load();tryPlay(v)});
+    v.addEventListener('pause',function(){if(v.__vis&&!document.hidden&&!v.ended)setTimeout(function(){tryPlay(v)},300)});
+  });
+  if('IntersectionObserver' in window){
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){
+      var v=e.target;v.__vis=e.isIntersecting;
+      if(e.isIntersecting)tryPlay(v);else v.pause();
+    })},{rootMargin:'120px 0px',threshold:0});
+    if(hv)io2.observe(hv);if(bv)io2.observe(bv);
+  }else{tryPlay(hv);tryPlay(bv)}
+  document.addEventListener('visibilitychange',function(){if(!document.hidden){[hv,bv].forEach(function(v){if(v&&v.__vis!==false)tryPlay(v)})}});
+  // pirmas prisilietimas pažadina vaizdą, jei naršyklė buvo sustabdžiusi (taupymo režimas)
+  ['touchstart','scroll'].forEach(function(ev){window.addEventListener(ev,function f(){window.removeEventListener(ev,f);[hv,bv].forEach(function(v){if(v&&v.paused&&v.__vis!==false)tryPlay(v)})},{passive:true})});
+})();
